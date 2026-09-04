@@ -22,9 +22,14 @@ import lombok.Setter;
 @Getter
 @Table(name="users")
 public class User {
+  public User() {};
+
+  
+  // Columns
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private Long id;
 
   @Column(name = "username", nullable = false, unique = true, length = 20)
   @Setter
@@ -54,6 +59,4 @@ public class User {
   @UpdateTimestamp
   @Column(name = "updated_at")
   private LocalDateTime updatedAt;
-
-  public User() {};
 }
