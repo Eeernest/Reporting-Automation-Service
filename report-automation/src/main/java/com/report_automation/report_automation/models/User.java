@@ -22,7 +22,7 @@ import lombok.Setter;
 @Getter
 @Table(name="users")
 public class User {
-  public User() {};
+  public User() {}
 
   
   // Columns
